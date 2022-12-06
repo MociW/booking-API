@@ -1,9 +1,9 @@
-import userModel from "../models/user-model.js";
+import userModel from '../models/user-model.js';
 
 export const deleteuser = async (req, res, next) => {
     try {
         const updateuser = await userModel.findByIdAndDelete(req.params.id);
-        res.status(200).json("Data Deleted");
+        res.status(200).json('Data Deleted');
     } catch (err) {
         next(err);
     }
